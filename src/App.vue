@@ -1,23 +1,24 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'App'
-}
+<script setup lang="ts">
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<template>
+  <a-layout>
+    <a-layout-header>
+      <a-menu mode="horizontal">
+        <a-menu-item>
+          <router-link to="/">Home</router-link>
+        </a-menu-item>
+        <a-menu-item>
+          <router-link to="/about">About</router-link>
+        </a-menu-item>
+      </a-menu>
+    </a-layout-header>
+    <a-layout-content>
+      <router-view/>
+    </a-layout-content>
+  </a-layout>
+</template>
+
+<style scoped>
+
 </style>
